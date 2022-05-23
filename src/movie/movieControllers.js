@@ -5,6 +5,7 @@ const Movie = require("./movieModel")
 //function to add a movie to the database
 exports.addMovie = async (req, res) => {
     try {
+        //creating a new movie with entire body request containing key value pairs
         const newMovie = await Movie.create(req.body);
         res.status(200).send({ movie: newMovie })
     } catch (error) {

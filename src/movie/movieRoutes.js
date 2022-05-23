@@ -7,6 +7,7 @@ const { addMovie, listMovies, updateMovie, deleteMovie } = require("./movieContr
 const movieRouter = Router();
 
 //use http verb POST and GET to add and read data to our movie endpoint
+//so /movie is the ENDPOINT from a HTTP request
 movieRouter.post("/movie", addMovie);
 movieRouter.get("/movie", listMovies);
 movieRouter.patch("/movie", updateMovie);
